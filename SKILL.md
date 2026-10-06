@@ -174,7 +174,7 @@ Software can be the subject of what it really does: «يرسل التطبيق ت
 
 ### 19. Tashkeel: minimal on screen, more for speech when needed
 
-On displayed copy, default to minimal tashkeel. Mark the vowel that tells two readings apart, not the whole word: «تُرسَل الفاتورة» (passive) / «تُرسِل الفاتورة» (active) differ in the vowel on the سين; «المرسِل» (sender) / «المرسَل» (sent); «قَبل» / «قِبَل». In a narration script, fuller vocalisation is fine where the speech engine misreads words.
+On displayed copy, default to minimal tashkeel. Mark the vowel that tells two readings apart, not the whole word: «تُرسَل الفاتورة» (passive) / «تُرسِل الفاتورة» (active) differ in the vowel on the سين; «المرسِل» (sender) / «المرسَل» (sent); «قَبل» / «قِبَل». In a narration script, fuller vocalisation is fine where the speech engine misreads words. Always vocalise proper names in narration, because a voice cannot know them: «مُنى», not «منى», which a voice may read as «مَنى». Vocalise the whole name each time it appears, with any attached prefix («ولِمُنى»).
 
 ### 20. Accessibility text: describe, do not translate
 
