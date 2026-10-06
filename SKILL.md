@@ -1,6 +1,16 @@
 ---
 name: native-arabic
-description: Write Arabic that reads as if a native professional wrote it in Modern Standard Arabic, not as if someone translated it from English. Use this whenever you write, edit, review or fix Arabic that a person will read, even a single word or a status label. That covers UI strings and button labels, locale files (ar.json, lang/ar/*.php, *.ar.yml), error messages, empty states, notifications, help text and articles, emails, narration and video scripts, and formal letters. It also covers count strings and plural rules, and reviews of Arabic copy someone else wrote. Use it even when the request does not say "Arabic style" and you are only "translating a string" or "fixing a label". Do not use it when you only quote, search, grep, transliterate or read back Arabic that already exists.
+description: >-
+  Write Arabic that reads as if a native professional wrote it in Modern Standard Arabic, not as if
+  someone translated it from English. Use this whenever you write, edit, review or fix Arabic that a
+  person will read, even a single word or a status label. That covers UI strings and button labels,
+  locale files (ar.json, lang/ar/*.php, *.ar.yml), error messages, empty states, notifications, help
+  text and articles, emails, narration and video scripts, and formal letters. It also covers
+  accessibility text: alt text, aria-label and other accessible names, screen-reader text, live
+  announcements and captions. It covers count strings and plural rules, and reviews of Arabic copy
+  someone else wrote. Use it even when the request does not say "Arabic style" and you are only
+  "translating a string" or "fixing a label". Do not use it when you only quote, search, grep,
+  transliterate or read back Arabic that already exists.
 ---
 
 # Native Arabic
@@ -146,7 +156,7 @@ Use the Arabic comma (،) and question mark (؟), with no space before them. Ara
 ### 16. Spell the hamza and choose the verb for the control
 
 - Hamzat al-qatʿ: «أدخل»، «أرسل»، «أنشئ»، «إدخال»، «إرسال»، «إنشاء»، «إعادة». Hamzat al-wasl: «اختر»، «استخدم»، «انقر»، «اضغط»، «ابحث»، «اختيار»، «استخدام». Not «انشئ»، «ادخل» (for "enter a value"), «إختر»، «إستخدام».
-- A value the reader types: «أدخل» / «إدخال». A choice from options: «اختر» / «اختيار» or «حدد» / «تحديد». A button: «اضغط» / «الضغط على», or «انقر» / «النقر على».
+- A value the reader types: «أدخل» / «إدخال». A choice from options: «اختر» / «اختيار» or «حدد» / «تحديد». A button: «اضغط» / «الضغط على», or «انقر» / «النقر على». Prefer «الضغط على» or «اختيار» where touch, keyboard or voice input is possible.
 - An action done again: «أعد المحاولة» / «إعادة المحاولة». For "use" or "apply": «استخدم» / «استخدام».
 
 ### 17. Let the software act; drop opaque metaphors
@@ -166,9 +176,23 @@ Software can be the subject of what it really does: «يرسل التطبيق ت
 
 On displayed copy, default to minimal tashkeel. Mark the vowel that tells two readings apart, not the whole word: «تُرسَل الفاتورة» (passive) / «تُرسِل الفاتورة» (active) differ in the vowel on the سين; «المرسِل» (sender) / «المرسَل» (sent); «قَبل» / «قِبَل». In a narration script, fuller vocalisation is fine where the speech engine misreads words.
 
+### 20. Accessibility text: describe, do not translate
+
+Alt text, accessible names (`aria-label`), link text, announcements and captions are heard, often with no context. Write them from what the element is and does on this screen, never from the English attribute. Detail and more pairs are in `references/accessibility.md`.
+
+- **Purpose, not shape; no role or state.** The screen reader adds the role and the state itself, with words such as «زر» or «محدد». With the defaults, an action name is a verbal noun phrase, which shows no gender for the reader.
+- **Start the name with the visible text,** and make names unique in a list: «حذف الملف: عقد الإيجار».
+- **Alt text gives the meaning on this page:** `alt=""` for decoration, the action for an icon in a link, the finding for a chart. Never «صورة لـ».
+- **Write for the ear:** words for 1–10 in key sentences, the month as a word, no emoji or «/» for meaning, a full stop at the end.
+
+- Bad: «زر أيقونة سلة المهملات» → Good: «حذف الموعد»
+- Bad: «رسم بياني للمصروفات» → Good: «تضاعفت مصروفات السفر في سبتمبر.»
+- Bad: «لعرض سجل الاستعارة اضغط هنا» → Good: «عرض سجل الاستعارة»
+
 ## Worked cases: establish the facts first
 
 Each word below is right only for the stated facts. Establish the same facts before you reuse it.
+
 - **Who sees a comment.** Only the host sees it: «رسالة إلى المضيف». Everyone sees it: «تعليق علني». «تعليق عام» is unclear, because «عام» also means "general".
 - **A list's contents.** It holds all the team's expense claims: «مطالبات الفريق». It holds only those not yet reviewed: «مطالبات الفريق بانتظار المراجعة». Not «صندوق وارد الفريق».
 - **First-response deadline.** For the time allowed to send the first reply to a new message, write «مهلة الرد الأول». In «موعد الاستجابة الأول», the masculine «الأول» attaches to «موعد», so it reads "the first appointment for a response". «موعد الرد الأول» stays unclear, because both nouns are masculine. «مهلة» is feminine, so «الأول» can only describe «الرد».
@@ -181,11 +205,11 @@ Each word below is right only for the stated facts. Establish the same facts bef
 
 ## Expected output
 
-| English and context | Arabic | Why |
-| --- | --- | --- |
-| "We couldn't save your changes. Try again." (error) | «تعذّر حفظ التغييرات. يُرجى المحاولة مرة أخرى.» | What failed, then what to do; no blame; no gender |
-| "No bookings yet." (empty state) | «ليس لديك حجوزات بعد.» | A full sentence, not «لا حجوزات» |
-| "Public comment" (a comment everyone sees) | «تعليق علني» | Visibility decides the word; «رسالة إلى المضيف» is only for a message one person sees |
+| English and context                                 | Arabic                                          | Why                                                                                   |
+| --------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------- |
+| "We couldn't save your changes. Try again." (error) | «تعذّر حفظ التغييرات. يُرجى المحاولة مرة أخرى.» | What failed, then what to do; no blame; no gender                                     |
+| "No bookings yet." (empty state)                    | «ليس لديك حجوزات بعد.»                          | A full sentence, not «لا حجوزات»                                                      |
+| "Public comment" (a comment everyone sees)          | «تعليق علني»                                    | Visibility decides the word; «رسالة إلى المضيف» is only for a message one person sees |
 
 ## Self-check (read the finished Arabic against these lists)
 
@@ -200,6 +224,7 @@ Each word below is right only for the stated facts. Establish the same facts bef
 - [ ] و before a describing التي / الذي? سوف لن?
 - [ ] A passive that reads as active because its distinguishing vowel is missing?
 - [ ] A Latin comma or question mark in Arabic text?
+- [ ] An accessible name with «زر»، «أيقونة» or a state in it, one that does not start with the visible text, or a duplicate in a list?
 
 ### Product checks — fix before hand-over
 
@@ -212,6 +237,7 @@ Each word below is right only for the stated facts. Establish the same facts bef
 - [ ] Did I follow the project's recorded preferences (imperative or verbal noun; reader's gender; named people's gender)?
 - [ ] With the verbal-noun default, does any instruction (button, step, tooltip, error fix, help text) use an imperative? Do verbal-noun steps have a lead-in line?
 - [ ] With unknown gender, does a verb guess it where a verbal noun, a plural or a label would not?
+- [ ] Alt text and link text: «صورة لـ», «اضغط هنا», a file name, or a translation of the English attribute instead of the meaning here?
 
 ### Preferences — fix when the shorter form keeps the meaning
 
@@ -241,3 +267,4 @@ Use these when the project has no convention and you cannot ask.
 
 - `references/calques.md`: English-shaped constructions and their natural forms. Read it when you review or edit a long passage.
 - `references/grammar.md`: count strings (six forms), number agreement, ordinals, prepositions, dates, punctuation, tashkeel. Read it for any string with a number or a placeholder.
+- `references/accessibility.md`: alt text by image type, accessible names, link text, form hints and errors, live announcements, landmarks, captions, and how screen readers read Arabic (tashkeel, Latin words, digits, dates, symbols, `lang`/`dir`). Read it for any text that a screen reader speaks.
