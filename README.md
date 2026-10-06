@@ -53,6 +53,21 @@ a person will read.
 - `references/accessibility.md`: alt text, accessible names, announcements,
   captions, and how screen readers read Arabic
 
+## Contributing
+
+Contributions are welcome, especially from native Arabic speakers.
+
+- **Report a misfire.** Open an issue with the English source (if any), the
+  Arabic the skill produced, the Arabic a native writer would use, and one
+  line on why.
+- **Suggest a rule or a pair.** Open a pull request. Write each rule in your
+  own words, as a general rule. Write your own example sentences, in a
+  neutral everyday product (bookings, files, a clinic, expenses).
+- **Keep it short.** `SKILL.md` holds the method and the rules that matter
+  most; detail goes in `references/`.
+- **Mark preferences.** If a form is correct but stiff, add it as a
+  preference, not as an error.
+
 ## Licence
 
 MIT. See `LICENSE`.
