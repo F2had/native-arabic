@@ -170,7 +170,7 @@ Software can be the subject of what it really does: «يرسل التطبيق ت
 - **Success notification:** what happened, in the past: «حُفظت التغييرات» or «تم حفظ التغييرات».
 - **Empty state:** what is missing, and what appears here or what to do: «ليس لديك ملفات بعد».
 - **Confirmation:** the question names the action and the object; the button repeats the action: «حذف الملف نهائيًا؟» → «حذف» / «إلغاء». «هل تريد حذف الملف؟» is the masculine fallback.
-- **Help text and narration:** in help text, quote the real on-screen label so the reader can find it, then explain the action in natural Arabic. In narration over a screen that shows the control, describe the action without quoting a calqued label. When the label itself is a calque and the fix is in scope, recommend a better label.
+- **Help text and narration:** in help text, quote the real on-screen label so the reader can find it, then explain the action in natural Arabic. In narration over a screen that shows the control, describe the action without quoting a calqued label. When the label itself is a calque and the fix is in scope, recommend a better label. When the text names something the reader must write or choose (a title, a reason, a reply, a note), give one short, realistic example: «مع ذكر السبب، مثل: «البرنامج لا يفتح بعد إعادة التشغيل»». An example shows the kind of content faster than a definition.
 
 ### 19. Tashkeel: minimal on screen, more for speech when needed
 
