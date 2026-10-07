@@ -29,10 +29,20 @@ gender. When it cannot ask, it uses forms that show no gender.
 
 ## Install
 
-With the [skills](https://github.com/vercel-labs/skills) CLI:
+With the [skills](https://github.com/vercel-labs/skills) CLI, for Claude Code,
+Codex, OpenCode and other agents:
 
 ```sh
 npx skills add F2had/native-arabic
+# or
+bunx skills add F2had/native-arabic
+```
+
+As a Claude Code plugin:
+
+```sh
+/plugin marketplace add F2had/native-arabic
+/plugin install native-arabic@native-arabic
 ```
 
 Or by hand, for Claude Code:

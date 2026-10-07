@@ -1,0 +1,15 @@
+{
+  "name": "native-arabic",
+  "owner": {
+    "name": "Fahad",
+    "url": "https://github.com/F2had"
+  },
+  "description": "The native-arabic skill: Arabic that reads as if a native professional wrote it.",
+  "plugins": [
+    {
+      "name": "native-arabic",
+      "source": "./",
+      "description": "Write Arabic like a native professional in Modern Standard Arabic, not like a translation of English."
+    }
+  ]
+}
